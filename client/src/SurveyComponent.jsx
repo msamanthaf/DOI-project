@@ -8,7 +8,6 @@ import { themeJson } from "./theme";
 
 function SurveyComponent() {
     const survey = new Model(json);
-    // You can delete the line below if you do not use a customized theme
     survey.applyTheme(themeJson);
     survey.onComplete.add((sender, options) => {
         console.log(JSON.stringify(sender.data, null, 3));
