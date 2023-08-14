@@ -3,7 +3,7 @@ import SurveyComponent from "./SurveyComponent.jsx";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="surveyPage">
 			<SurveyComponent></SurveyComponent>
 		</div>
 	);
