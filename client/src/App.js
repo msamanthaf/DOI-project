@@ -14,7 +14,7 @@ const navItems = [
 function App() {
 	return (
 		<div className="bg-doi-blue h-screen w-screen">
-			<div className="flex flex-row justify-between py-6 px-11">
+			<div className="flex flex-row justify-between pt-16 pb-2 px-28">
 				<img
 					src={doiLogo}
 					alt="doi Logo"
@@ -27,7 +27,7 @@ function App() {
 					Join Now
 				</button>
 			</div>
-			<div className="flex flex-row justify-items-center my-52 mx-72">
+			<div className="flex flex-row justify-items-center my-32 mx-72">
 				<img src={doiImage} alt="DOI Image" className="w-1/2" />
 				<div className="flex flex-col m-5">
 					<div className="mt-32">
