@@ -39,8 +39,8 @@ function App() {
 						<text className="font-plex text-xl text-doi-light-blue">
 							DOI (Dating Orang Indo) Project is a one-off, student-run passion
 							project aiming to connect Indonesian students studying in Canada
-							(*Beta release: Only in Vancouver) to meet ideal date from your
-							city/university.
+							(*Beta release: Only in Vancouver) to meet their ideal date from
+							your city/university.
 						</text>
 					</div>
 				</div>
