@@ -16,7 +16,7 @@ const navItems = [
 function App() {
 	return (
 		<Router>
-			<div className="bg-doi-blue h-screen w-screen">
+			<div className="bg-doi-blue min-h-screen min-w-screen">
 				<div className="flex flex-row justify-between pt-16 pb-2 px-28">
 					<img src={doiLogo} alt="doi Logo" style={{ maxWidth: '3%' }} />
 					<Navbar navItems={navItems} />
@@ -30,16 +30,20 @@ function App() {
 					<Route
 						path="/"
 						element={
-							<div className="flex flex-row justify-items-center my-32 mx-72">
-								<img src={doiImage} alt="DOI Image" className="w-1/2" />
-								<div className="flex flex-col m-5">
-									<div className="mt-32">
-										<text className="font-bold font-mufteya text-8xl text-doi-light-blue">
+							<div className="flex flex-col md:flex-row justify-items-center my-4 md:my-32 mx-4 md:mx-72">
+								<img
+									src={doiImage}
+									alt="DOI Image"
+									className="w-full md:w-1/2"
+								/>
+								<div className="flex flex-col m-5 md:m-5">
+									<div className="mt-4 md:mt-32">
+										<text className="font-bold font-mufteya text-2xl md:text-8xl text-doi-light-blue">
 											Date 🤝 Data
 										</text>
 									</div>
-									<div className="mt-10">
-										<text className="font-plex text-xl text-doi-light-blue">
+									<div className="mt-4 md:mt-10">
+										<text className="font-plex text-sm md:text-xl text-doi-light-blue">
 											DOI (Dating Orang Indo) Project is a one-off, student-run
 											passion project aiming to connect Indonesian students
 											studying in Canada (*Beta release: Only in Vancouver) to
