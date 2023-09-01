@@ -1,5 +1,5 @@
 import './App.css';
-import SurveyComponent from './SurveyComponent.jsx';
+import SurveyComponent from './pages/Survey/SurveyComponent.jsx';
 import Navbar from './components/Navbar/Navbar';
 import doiLogo from './assets/doi.svg';
 import doiImage from './assets/people-art.png';
