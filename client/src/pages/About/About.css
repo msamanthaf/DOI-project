@@ -1,0 +1,10 @@
+.about {
+	position: relative;
+    display: flex;
+    background-color: #F9F1F1;
+    height: 77vh;
+    border-top: solid #CF9299;
+	margin-top: -0.75vw;
+	width: 100%;
+	z-index: 10;
+}

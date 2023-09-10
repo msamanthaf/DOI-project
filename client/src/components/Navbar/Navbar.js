@@ -1,22 +1,42 @@
 import React from 'react';
-import './Navbar.css'; // Import the CSS file for the Navbar styling
-import { FaInstagram } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import NAV from '../../statics/Nav';
+import {
+    AppBar,
+    Toolbar,
+  } from '@mui/material';
+import './Navbar.css';
+// import { motion } from 'framer-motion';
 
-function Navbar({ navItems }) {
-	return (
-		<div className="flex w-1/3 h-5.5vh bg-opacity-20 bg-white rounded-full justify-between items-center text-white font-sans py-4 px-12">
-			{navItems.map((item, index) => (
-				<a className="text-xl" key={index} href={item.link}>
-					{item.name}
-				</a>
-			))}
-			<hr
-				className="border-0 bg-white justify-self-end mt-1"
-				style={{ height: '2.75vh', width: '0.01vw' }}
-			/>
-			<FaInstagram className="text-2xl ml-1" />
-		</div>
-	);
+function Navbar(){
+    const location = useLocation();
+    
+    const pageLinks = NAV.map(({ TITLE, REF }, index) => {
+        let active = REF === location.pathname ? 'active' : '';
+        return (
+            <React.Fragment>
+                {active ? (
+                <Link className={`nav-links ${active}`} 
+                to={REF}
+                >{TITLE}</Link>
+                ) : (
+                <Link className={`nav-links`} 
+                to={REF}
+                style={{zIndex: `${8-index}`}}
+                >{TITLE}</Link>)}
+
+            </React.Fragment>
+        )
+    })
+    return (
+        <div className="nav">
+                <div className='blank-space'></div>
+                <div className="navbar-toolbar">
+                    {pageLinks}
+                </div>
+        </div>
+    )
 }
 
 export default Navbar;

@@ -1,36 +1,39 @@
-.navbar {
-	display: flexbox;
-	width: 35.33%;
-	height: 5.5vh;
-	background-color: rgba(94, 93, 93, 0.8); /* Opaque black background */
-	border-top-left-radius: 50px; /* Rounded top-left corner */
-	border-bottom-left-radius: 50px; /* Rounded bottom-left corner */
-	border-top-right-radius: 50px; /* Rounded top-right corner */
-	border-bottom-right-radius: 50px; /* Rounded bottom-right corner */
+.nav {
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.navbar-toolbar {
+	font-size: 1.15vw;
+	padding-left: 3vw;
 	display: flex;
-	justify-content: center;
+}
+
+.blank-space {
+	height: 15vh;
+}
+
+.nav-links{
+	display: flex;
 	align-items: center;
-	color: white;
-	font-family: 'IBM Plex Sans', sans-serif;
-	padding-left: 2.9rem;
-}
-
-.navbar a {
-	flex: 1;
+	margin-left: -2vw;
+	justify-content: center;
+	background-color: #F9F1F1;
+	padding: 1.5vw;
+	border-top: solid #CF9299;
+	border-left: solid #CF9299;
+	border-right: solid #CF9299;
+	color: #CF9299;
+	width: 8vw;
 	text-decoration: none;
-	color: white;
-	font-size: 0.75rem;
+	border-top-left-radius: 3.5vw;
+	border-top-right-radius: 3.5vw;
+	z-index: 1;
 }
 
-.icon-link {
-	flex: 1;
-	font-size: 1rem;
-	color: white;
-}
-
-.hr {
-	height: 2.75vh;
-	width: 0.01vw;
-	border-width: 0;
-	background-color: white;
+.nav-links.active {
+	text-decoration: underline;
+	font-weight: bold;
+	z-index: 50;
 }
