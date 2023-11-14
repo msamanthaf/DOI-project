@@ -16,6 +16,16 @@
   }
 }
 
+section{
+	align-items: center;
+	z-index: 100;
+	user-select: none;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +34,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-image: url("/background.png");
 }
