@@ -8,27 +8,21 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  // Function to toggle dropdown visibility
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
-  // Reset dropdown state on window resize
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1123) {
-        // Adjust 768 to your desktop breakpoint
+      if (window.innerWidth >= 1157) {
         setIsDropdownOpen(true);
       }
 
-      if (window.innerWidth < 1123) {
-        // Adjust 768 to your desktop breakpoint
+      if (window.innerWidth < 1157) {
         setIsDropdownOpen(false);
       }
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -47,10 +41,10 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            className="mid:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="xl:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-default"
             aria-expanded={isDropdownOpen}
-            onClick={toggleDropdown} // Event handler for click
+            onClick={toggleDropdown}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -71,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({ menuItems }) => {
           </button>
           {isDropdownOpen && (
             <div className="w-full md:block md:w-auto" id="navbar-default">
-              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 ml-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 ml-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 :border-0">
                 <li>
                   <a
                     href="#"

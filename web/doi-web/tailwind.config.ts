@@ -11,7 +11,6 @@ const config: Config = {
   theme: {
     screen: {
       mid: "1123px",
-      // => @media (min-width: 640px) { ... }
     },
     extend: {
       backgroundColor: {
